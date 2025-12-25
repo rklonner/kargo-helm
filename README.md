@@ -56,25 +56,31 @@ This is a GitOps repository of a Kargo Helm example for getting started.
 
    ![change-package-visibility](docs/change-package-visibility.png)
 
-6. Download and install the latest CLI from [Kargo Releases](https://github.com/akuity/kargo/releases/latest)
+6. Apply the ArgoCD manifests
+
+   ```shell
+   kargo apply -f ./argocd
+   ```
+
+7. Download and install the latest CLI from [Kargo Releases](https://github.com/akuity/kargo/releases/latest)
 
    ```shell
    ./download-cli.sh /usr/local/bin/kargo
    ```
 
-7. Login to Kargo:
+8. Login to Kargo:
 
    ```shell
    kargo login --admin https://<kargo-url>
    ```
 
-8. Apply the Kargo manifests:
+9. Apply the Kargo manifests:
 
    ```shell
    kargo apply -f ./kargo
    ```
 
-9. Add the Git repository credentials to Kargo. This can also be done in the UI
+10. Add the Git repository credentials to Kargo. This can also be done in the UI
    in the `kargo-helm` Project.
 
    ```shell
@@ -89,7 +95,7 @@ This is a GitOps repository of a Kargo Helm example for getting started.
    to your Git repository, as well as the ability to create pull requests. Ensure
    that the given token has these privileges.
 
-10. Promote the image!
+11. Promote the image!
 
     You now have a Kargo Pipeline which promotes images from the guestbook
     container image repository, through a three-stage deploy pipeline. Visit
