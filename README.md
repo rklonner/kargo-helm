@@ -45,7 +45,7 @@ This is a GitOps repository of a Kargo Helm example for getting started.
    ```
 
    You will now have a `guestbook` container image repository. e.g.:
-   https://github.com/yourgithubusername/guestbook/pkgs/container/guestbook
+   https://github.com/users/yourgithubusername/packages/container/package/guestbook
 
 5. Change guestbook container image repository to public.
 
